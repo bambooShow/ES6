@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <p>账号:<input type="text" id="account"></p>
+        <p>密码:<input type="text" id="account2"></p>
+        <p><input type="button" value="登录" id="loginbtn"></p>
+    </form>
+
+    <script>
+        $("#loginbtn").on("click", function () {
+            var account = $("account").val();
+            var password = $("#password").val();
+            //对象简写应用场景
+            var params = { account, password };
+            $.ajax({
+                type: "post",
+                url: "xxx",
+                data: params,
+                success() {
+
+                }
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>
